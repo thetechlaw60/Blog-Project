@@ -23,6 +23,7 @@
         font-weight: bold;
         
      }
+     
 
 </style>
 
@@ -30,4 +31,18 @@
 <h1> Welcome to Ejay's Place Blog</h1>
 <h5>Food Recipes, Home Organization, Lifestyle, Events, and Yes...A little peep  into my routine  as a food lover!</h5>
 
+{% for post in posts %}
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{post.content}}</h6>
+    
+      <p class="card-text"></p>
+      <a href="/edit/{{post.id}}" class="card-link">Edit link</a>
+      <a href="/delete/{{post.id}}" class="card-link">Delete</a>
+    </div>
+  </div>
+</br>
+
+ {% endfor %}
 {%  endblock  %}

@@ -2,36 +2,71 @@
 
 
 {% block content %}
+
+
 <style>
- .o{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:
- }
+    
+        body{
+            background-image: url({{url_for('static',filename='home.jpg')}});
+            background-size: cover; 
+        }
+    
+    h1{
+        text-align: center;
+        
+        font-family: Ariel, Helvetica, sans-sarif;
+        font-size: 400%;
+        font-weight: bolder;
+         margin-top:70px;
+    }
 
-h1{
-    text-align: center;
-    
-    font-family: Ariel, Helvetica, sans-sarif;
-    font-size: 300%;
-    font-weight: bolder;
-    padding-top: 10px
-}
-h5{
-    text-align: center;
-    
-    font-family: Ariel, Helvetica, sans-sarif;
-    font-weight: bold;
-}
- .o div {
-    margin: 10px;
-    padding: 8px;
-    width: 50%;
-    
 
-}
+    h5{
+        text-align: center;
+        font-family: Ariel, Helvetica, sans-sarif;
+        
+    }
+    .o{
+        width: 50%;
+        
+        
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-top:40px;
+        
+
+        
+        
+        
+    }
+    button{
+        margin: 12px;
+        padding: 10px;
+        width: 98%;
+        
+    } 
+    div input{
+
+        margin: 12px;
+        padding: 10px;
+        width: 98%;
+        margin-right: 20px;
+        outline: none;
+        border-radius: 17px;
+    }
+    .e{
+        width: 98%;
+        margin-left: 10px;
+        
+    }
+    button:hover{
+        background: linear-gradient(90deg, lightyellow, white);
+    }
+    h4{
+        margin-left: 10px;
+    }
+
 
 </style>
     
@@ -39,27 +74,28 @@ h5{
 <h1>Contact Us</h1>
 <h5>Hi There! For all enquiries, please email us using the form below</h5>
 </br>
+
 <form class="o" method="POST">
     <h4> How can we help you? </h4>
-    <div class="v"> 
 
-        
-        <select id="select">
-            <option value="select">Select</option>
-            <option value="Having issues with Account set up or login?">Having issues with Account set up or login?</option>
-            <option value="Forgot password?">forgot password?</option>
-            <option value="Difficulty creating blog?">Difficulty creating blog?"</option>
-            <option value="others">Others</option>
-
-        </select>
-    </div>
-    <div>    
-        
+    <div>   
         <input type="email" id="email" name="email" class="form control" placeholder="Enter Email..." required>
     </div>
-    <div> 
-    <button>Register</button>
-    </div> 
+</br>
+    <div class="e">
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select</option>
+        <option value="1">Having issues creating an accout?</option>
+        <option value="2">Having issues logging?</option>
+        <option value="3">Having issues creating a post?</option>
+        <option value="3">Others</option>
+
+      </select>
+    </div>
+</br>  
+    <div>    
+        <button type"submit">Submit</button>
+    </div>     
 
 
 

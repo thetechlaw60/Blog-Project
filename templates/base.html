@@ -19,10 +19,12 @@
             <li class="a"><a href="{{ url_for('about')}}">About</a></li>
             <li class="b"><a href="{{ url_for('contact')}}">Contact US</a></li>
             
-            
+            {% if current_user.is_authenticated %}
+            <li class="f"><a href="{{ url_for('logout')}}">Logout</a></li>
+            {% else %}
             <li class="h"><a href="{{ url_for('login')}}">Login</a></li>
             <li class="g"><a href="{{ url_for('register')}}">Register</a></li>
-            <li class="f"><a href="{{ url_for('logout')}}">Logout</a></li>
+            {% endif %}
             
         </ul>    
         
