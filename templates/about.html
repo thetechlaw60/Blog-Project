@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<style>
+    body{
+        background-color: lightpink;
+    }
+
+   .j{
+    display: flex;
+    
+    width: 70%;
+    align items: center;
+    justify-content: center;
+    margin: 0;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0px 4px 8px 0px;
+    
+   }
+
+   .d{
+    margin-left:40px;
+    margin-right:40px;
+    text-align: center;
+   }
+   h1{
+    margin-top:30px;
+   }
+</style>
+<div class="j">
+    <div>
+        <img src="{{ url_for('static', filename='about3.jpg')}}" alt="image" width="450" height="450">
+    </div>
+    <div class="d">    
+        <h1>Hi There!</h1>
+        
+        <p>
+            <b>Welcome to Ejay's Place Blog!</b> we are happy to have you.
+            Here, we are all about food recipes, Events, Lifestyle, as well as a little sneek peek into my daily routine.
+            Feel feel to open an Account with Us, make contributions and create contents... we are here for it.
+            P.s incase you are wondering why the a picture of Macrons, well don't you just love Macrons with the 
+            diffent burst of flavour and like the say goes <b style="font-style: italic;">"variety is the spice of life"</b> so do me a favor 
+            and order a pack of Macrons or better still bake it. Thank you and once again welcome to <b>Ejay's Place!</b>
+        </p>
+    </div>
+</div>    
+
+{%  endblock  %}

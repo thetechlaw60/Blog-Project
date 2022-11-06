@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<style>
+    body{
+        background-image: url({{url_for('static',filename='home1.jpg')}});
+        background-size: cover; 
+    }
+    h1{
+        text-align: center;
+        color: white;
+        font-family: Ariel, Helvetica, sans-sarif;
+        font-size: 400%;
+        font-weight: bolder;
+        padding-top: 10px
+    }
+    h5{
+        text-align: center;
+        color: white;
+        font-family: Ariel, Helvetica, sans-sarif;
+        font-weight: bold;
+        
+     }
+
+</style>
+
+
+<h1> Welcome to Ejay's Place Blog</h1>
+<h5>Food Recipes, Home Organization, Lifestyle, Events, and Yes...A little peep  into my routine  as a food lover!</h5>
+
+{%  endblock  %}

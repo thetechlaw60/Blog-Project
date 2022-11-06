@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<style>
+ .o{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:
+ }
+
+h1{
+    text-align: center;
+    
+    font-family: Ariel, Helvetica, sans-sarif;
+    font-size: 300%;
+    font-weight: bolder;
+    padding-top: 10px
+}
+h5{
+    text-align: center;
+    
+    font-family: Ariel, Helvetica, sans-sarif;
+    font-weight: bold;
+}
+ .o div {
+    margin: 10px;
+    padding: 8px;
+    width: 50%;
+    
+
+}
+
+</style>
+    
+
+<h1>Contact Us</h1>
+<h5>Hi There! For all enquiries, please email us using the form below</h5>
+</br>
+<form class="o" method="POST">
+    <h4> How can we help you? </h4>
+    <div class="v"> 
+
+        
+        <select id="select">
+            <option value="select">Select</option>
+            <option value="Having issues with Account set up or login?">Having issues with Account set up or login?</option>
+            <option value="Forgot password?">forgot password?</option>
+            <option value="Difficulty creating blog?">Difficulty creating blog?"</option>
+            <option value="others">Others</option>
+
+        </select>
+    </div>
+    <div>    
+        
+        <input type="email" id="email" name="email" class="form control" placeholder="Enter Email..." required>
+    </div>
+    <div> 
+    <button>Register</button>
+    </div> 
+
+
+
+</form>    
+
+{%  endblock  %}
